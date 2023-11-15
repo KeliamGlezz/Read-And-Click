@@ -1,0 +1,88 @@
+body{
+    background: linear-gradient(180deg, rgba(241,110,0,1) 0%, rgba(229,124,35,1) 0%, var(--main-gray) 100%);
+    font-family: "Comic-Neue";
+    height: 100%;
+}
+
+.landing {
+    color: white;
+    background-color: var(--second-orange);
+}
+
+.landing h2{
+    font-family: "Comic Sans MS";
+    margin: 0;
+    margin-left: 10px;
+}
+
+.catalogo {
+    margin: 0 auto;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Distribuir productos uniformemente */
+    padding: 20px;
+}
+
+.producto {
+    clear: both;
+    flex: 1;
+    max-width: 180px; /* Limita el ancho de los productos */
+    border: 1px solid #ddd;
+    text-align: center;
+    background-image: url('../SRC/patronProducto.png');
+    background-size: contain;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.producto img {
+    width: 150px;
+    border: solid 2px black;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.producto h2{
+    font-size: 18px;
+}
+
+.producto p{
+    font-family: "Comic Sans MS";
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+.producto a{
+    background-color: white;
+    background-image: url(../SRC/compra3.png);
+    background-size: contain;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 2px black;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 2px 0px black;
+    text-decoration: none;
+    box-shadow: -2px 3px 0 black;
+    margin-bottom: 10px;
+}
+
+/* Estilos adicionales para hacer que el catálogo sea responsive */
+@media (max-width: 768px) {
+    .producto {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .producto {
+        flex-basis: calc(50% - 20px);
+    }
+}

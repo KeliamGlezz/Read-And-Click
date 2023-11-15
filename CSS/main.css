@@ -1,0 +1,605 @@
+*{
+  --main-orange: #E8B502;
+  --second-orange: #f1b415;
+  --main-darkbrown: #9D4116;
+  --main-gray: #6B8E7F;
+  --main-black: #333333;
+  --white: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  transition: background-image 0.5s;
+  height: 100vh;
+  cursor: url('../SRC/cursor.png'), auto;
+}
+
+@font-face {
+  font-family: "Comic-Neue";
+  src: url("../Fonts/ComicNeue-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DK Frozen";
+  src: url("../Fonts/DK\ Frozen\ Memory.otf");
+}
+
+@font-face {
+  font-family: "Glowing Bubble";
+  src: url("../Fonts/DK\ Frozen\ Memory.otf");
+}
+
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes shake-vertical {
+
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    transform: rotateZ(20deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+    transform: rotateZ(20deg);
+  }
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*Toogle*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/**/
+
+header {
+  /*    background-color: #F29727;*/
+  margin: 0;
+  font-family: "Comic-Neue";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(156, 156, 156);
+  background-image: linear-gradient(rgb(224 140 0 / 50%), rgb(193 129 0 / 50%)),
+    url(../SRC/pattern.jpg);
+
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+  box-shadow: 2px 2px 4px #874300;;
+}
+
+.logo {
+  color: white;
+  text-shadow: 2px 3px 0 black;
+  width: 100%;
+  margin: 0;
+  font-family: "Glowing Bubble";
+  font-variant: small-caps;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  transition: all 0.5s;
+}
+
+#menu {
+  position: absolute;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background-image: url(../SRC/icons8-menu-120.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  right: 7px;
+  top: 15px;
+}
+
+.sub-menu {
+  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-out-right {
+	animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.sub-menu {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: rgba(0, 0, 0, 0.548), url(../SRC/patron.png);
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../SRC/patternCopia2.png);
+  background-position: 50%;
+
+  z-index: 1;
+}
+
+.sub-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sub-menu li {
+  width: 30%;
+}
+.sub-menu li button{
+  font-family: "Comic-Neue";
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: white;
+  border: solid 2px black;
+}
+
+.menu-open{
+  background-image: url("../SRC/icons8-x-120.png") !important;
+  position: fixed;
+}
+
+.drop-on{
+  display: inline;
+}
+
+.landing{
+  transition: all 1s;
+  width: 100%;
+  box-shadow: 0px 12px 20px 2px black;
+}
+
+.content {
+  background-image: url(../SRC/patternCopia2.png);
+  width: 100%;
+  /*temp*/
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.content>section {
+  font-family: "Comic-Neue";
+  position: relative;
+  bottom: 10px;
+  background-color: white;
+  padding: 10px;
+
+  margin: 0 10px;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.carrusel {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  scroll-snap-type:mandatory;
+
+}
+
+.carrusel img {
+  object-fit: cover;
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+  margin: 0;
+  width: 100%;
+  animation: scrollAnimation 15s linear infinite;
+}
+
+
+/*Boton del carrusel Mas info*/
+.content>a{
+  position: relative;
+  padding: 15px;
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(224, 142, 0, 0.767), rgba(255, 255, 255, 0.5)),
+    url(../SRC/pattern.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 1px 0 2px black;
+}
+.content a{
+  position: relative;
+  bottom: 30px;
+}
+a{
+  color: white;
+  text-shadow: 2px 3px 0 black;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Comic-Neue";
+}
+
+li a{
+  display: block;
+  border: solid 2px black;
+  text-align: center;
+  text-decoration: none; 
+  text-shadow: none;
+  color: var(--main-black);
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Comic-Neue";
+  background-color: white;
+  border-radius: 20px;
+  padding: 15px;
+  width: 100%;
+  box-shadow: -2px 3px 0 black;;
+}
+
+/*Estilos para onomatopeya animada en bucle*/
+#o-1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 150px;
+  height: 150px;
+  -webkit-animation: shake-vertical 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+  animation: shake-vertical 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+main {
+  width: 100%;
+  color: white;
+  background-color: var(--main-darkbrown);
+}
+
+
+/*item-preview*/
+
+/* Estilos para la lista no ordenada dentro del elemento 'main' */
+/* main ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: solid 2px purple;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #d10303;
+  padding: 10px;
+} */
+
+main ul {
+  transition: max-width 0.5s;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 88%;
+  height: auto;
+  display: grid; 
+  justify-items: start;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 10px 10px; 
+  grid-template-areas: 
+    "1fr 1fr"
+    "1fr 1fr"; 
+  padding: 10px;
+}
+main > h2{
+  font-size: 2em;
+  font-family: "Glowing Bubble";
+  text-shadow: 6px 3px 8px black;
+  margin: 0;
+  padding-left: 10px;
+  text-decoration: underline white;
+  margin-bottom: 20px;
+}
+
+/* Estilo para cada elemento con la clase 'producto' */
+.producto {
+  width: 100%;
+}
+
+/* Estilos para el div dentro de cada elemento 'producto' */
+.producto>div {
+  width: 100%;
+  border-radius: 20px;
+  float: left;
+  display: flex;
+  overflow: hidden;
+  border: solid 4px rgba(255, 255, 255, 0.233);
+  padding: px;
+}
+
+/* Estilos para las imágenes dentro de los elementos 'producto' */
+.producto img {
+  width: 60%;
+  height: auto;
+}
+
+/* Estilos para la clase 'info' (que se muestra en hover) */
+/*CONTINUAR EDITANDO, BUCAR LA FORMA DE AGRANDAR INFO*/
+.info {
+  /*Mueve hacia arriba para estar oculta inicialmente */
+
+  width: 40%;
+  background-color: #333333;
+  color: white;
+  transition: right 0.3s;
+
+  font-family: 'Segoe UI';
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+/* Estilos para el footer */
+footer {
+  font-family: "Comic-Neue";
+  display: flex;
+  background-color: #333333;
+  color: white;
+  padding: 20px;
+  /* text-align: center; */
+  position: static;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: white; 
+  text-decoration: none; 
+  margin: 0 10px; 
+}
+
+
+footer ul {
+  list-style: none;
+  padding: 0; 
+}
+
+footer li {
+  display: inline; 
+}
+
+
+/*hover*/
+.producto:hover .info {
+  right: 0;
+}
+
+/*Pantallas movilGrande - Tablet*/
+@media (min-width: 700px) {
+  .nav-menu {
+    clear: both;
+    display: block;
+  }
+
+  .sub-menu {
+    clear: both;
+    position: relative;
+    display: inline;
+    background: none;
+    width: 80%;
+  }
+
+  /*Estilos menu tabletas.*/
+  .sub-menu ul {
+    width: 60%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .sub-menu li button{
+    font-family: "Comic-Neue";
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+    height: 70px;
+  }
+  .sub-menu li:nth-child(4),
+  .sub-menu li:nth-child(5){
+    display: none;
+  }
+  .sub-menu li {
+    width: 100%;
+  }
+  #menu{display: none;}
+  
+  /*distribucion de los productos.*/
+  .producto{
+    width: 100%;
+  }
+  main ul{
+    max-width: 80%;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: 
+    "1fr 1fr 1fr"; 
+    padding-bottom: 20px;
+  }
+}
+/*Pantallas mayor que tablet*/
+@media (min-width: 750px) {
+  body{
+    height: 100%;
+    transition: background 0.5s;
+    background: linear-gradient(180deg, rgba(241,110,0,1) 0%, rgba(229,124,35,1) 0%, var(--main-gray) 100%);
+    background-size: cover;
+  }
+  .landing{
+    margin: 0 auto;
+    width: 80%;
+  }
+  #logo {
+    width: 100px;
+    height: 100px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+
+}

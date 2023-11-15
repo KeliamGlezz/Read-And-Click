@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/article.css">
+    <link rel="shortcut icon" href="../SRC/keliam.png" type="image/x-icon">
+    <title>Read & Click.</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="../SRC/keliam.png" alt="">
+            <h1>Read & Click</h1>
+        </div>
+        <nav class="nav-menu" id="nav">
+            <button id="menu" onclick="estiloBoton(this)"></button>
+            <div class="sub-menu" id="dropMenu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Pages/newprofile.html">Perfil</a></li>
+                    <li><a href="../Pages/help.html">Ayuda</a></li>
+                    <li><a href="../Pages/aboutUs.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const button = document.getElementById('menu');
+            const dropmenu = document.getElementById('dropMenu');
+            let isBackgroundChanged;
+
+            // Agrega o elimina la clase 'menu-open' al botón y modifica la visibilidad del dropMenu
+            function estiloBoton() {
+                if (button.style.backgroundImage === "./SRC/icons8-menu-120.png") {
+                    isBackgroundChanged = false;
+                }
+                if (!isBackgroundChanged) {
+                    dropmenu.classList.remove('slide-out-right');
+                    button.classList.add('menu-open');
+                    dropMenu.classList.add('drop-on');
+                    button.style.position = "fixed";
+                    console.log("true");
+                } else {
+                    dropmenu.classList.add('slide-out-right');
+                    setTimeout(function () {
+                        button.classList.remove('menu-open');
+                        dropMenu.classList.remove('drop-on');
+                        button.style.position = "absolute";
+                        console.log("false");
+                        dropmenu.classList.remove('slide-out-right');
+                    }, 500);
+                }
+                isBackgroundChanged = !isBackgroundChanged;
+            }
+        </script>
+    </header>
+    <main>
+        <div class="landing">
+            <h1>Pagina web en construccion, disculpe las molestias.</h1>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Correo electrónico: micorreo@dominio.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

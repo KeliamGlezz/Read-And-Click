@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <title>Read & Click.</title>
+    <link rel="shortcut icon" href="./SRC/keliam.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="./SRC/keliam.png" alt="">
+            <h1>Read & Click</h1>
+        </div>
+        <nav class="nav-menu" id="nav">
+            <button id="menu" onclick="estiloBoton(this)"></button>
+            <div class="sub-menu" id="dropMenu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Pages/newprofile.html">Perfil</a></li>
+                    <li><a href="../Pages/help.html">Ayuda</a></li>
+                    <li><a href="../Pages/aboutUs.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const button = document.getElementById('menu');
+            const dropmenu = document.getElementById('dropMenu');
+            let isBackgroundChanged;
+        
+            // Agrega o elimina la clase 'menu-open' al botón y modifica la visibilidad del dropMenu
+            function estiloBoton() {
+                if (button.style.backgroundImage === "./SRC/icons8-menu-120.png") {
+                    isBackgroundChanged = false;
+                }
+                if (!isBackgroundChanged) {
+                    dropmenu.classList.remove('slide-out-right');
+                    button.classList.add('menu-open');
+                    dropMenu.classList.add('drop-on');
+                    button.style.position = "fixed";
+                    console.log("true");
+                } else {
+                    dropmenu.classList.add('slide-out-right');
+                    setTimeout( function() {
+                        button.classList.remove('menu-open');
+                        dropMenu.classList.remove('drop-on');
+                        button.style.position = "absolute";
+                        console.log("false");
+                        dropmenu.classList.remove('slide-out-right');
+                    }, 500);
+                }
+                isBackgroundChanged = !isBackgroundChanged;
+            }
+        </script>
+    </header>
+    <div class="landing">
+        <div class="content">
+            <div class="carrusel">
+                <img src="./SRC/carrusel.jpg" alt="">
+                <img src="./SRC/carrusel2.jpg" alt="">
+                <img src="./SRC/carrusel3.jpg" alt="">
+                <img src="./SRC/carrusel.jpg" alt="">
+                <img src="./SRC/carrusel2.jpg" alt="">
+            </div>
+            <img id="o-1" src="./SRC/1.png" alt="">
+            <a href="./Pages/catalog.html">Nuestros Productos</a>
+            <section>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In odit voluptatem dicta ad cumque vel dolorem
+                voluptatum ipsum, veritatis optio sed laboriosam, corporis quibusdam? Molestiae molestias tenetur facere
+                beatae blanditiis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione amet explicabo, quia repellat voluptatem quas ex iste cupiditate commodi.
+            </section>
+        </div>
+        <main>
+            <h2>Los Mas vendidos en el mes de Octubre.</h2>
+            <ul>
+                <li class="producto">
+                    <div class="prueba">
+                        <img src="./SRC/comic1.png" alt="">
+                        <div class="info">
+                            <h2>Titulo: Spider-Man</h2>
+                            <p>Opiniones: 4.5/5</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="producto">
+                    <div>
+                        <img src="./SRC/comic1.png" alt="">
+                        <div class="info">
+                            <h2>Titulo: Spider-Man</h2>
+                            <p>Opiniones: 4.5/5</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="producto">
+                    <div>
+                        <img src="./SRC/comic1.png" alt="">
+                        <div class="info">
+                            <h2>Titulo: Spider-Man</h2>
+                            <p>Opiniones: 4.5/5</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="producto">
+                    <div>
+                        <img src="./SRC/comic1.png" alt="">
+                        <div class="info">
+                            <h2>Titulo: Spider-Man</h2>
+                            <p>Opiniones: 4.5/5</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="producto">
+                    <div>
+                        <img src="./SRC/comic1.png" alt="">
+                        <div class="info">
+                            <h2>Titulo: Spider-Man</h2>
+                            <p>Opiniones: 4.5/5</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="producto">
+                    <div>
+                        <img src="./SRC/comic1.png" alt="">
+                        <div class="info">
+                            <h2>Titulo: Spider-Man</h2>
+                            <p>Opiniones: 4.5/5</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Correo electrónico: micorreo@dominio.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
