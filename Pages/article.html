@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/article.css">
     <link rel="shortcut icon" href="../SRC/keliam.png" type="image/x-icon">
@@ -20,6 +22,25 @@
             <button id="menu" onclick="estiloBoton(this)"></button>
             <div class="sub-menu" id="dropMenu">
                 <ul>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme() {
+                                let valor = document.getElementById('theme').checked;
+
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Pages/newprofile.html">Perfil</a></li>
                     <li><a href="../Pages/help.html">Ayuda</a></li>
@@ -59,7 +80,125 @@
     </header>
     <main>
         <div class="landing">
-            <h1>Pagina web en construccion, disculpe las molestias.</h1>
+            <a href="../Pages/catalog.html">
+                < Volver al Catalogo.</a>
+            <section>
+                <div class="main_content">
+                    <div class="carousel_colum">
+                        <div class="BT_Carrusel">
+                            <div id="carouselExampleIndicators" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="0" class="active" aria-current="true"
+                                        aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../SRC/comics/comic5.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../SRC/comics/comic7.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../SRC/comics/comic2.png" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="miniaturas">
+                            <img src="../SRC/comics/comic5.png" alt="">
+                            <img src="../SRC/comics/comic7.jpg" alt="">
+                            <img src="../SRC/comics/comic2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="colum">
+                        <aside>
+                            <div>
+                                <h2>Titulo del comic</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatem, voluptas
+                                    velit, sed sapiente praesentium eveniet perferendis ea inventore eaque atque?
+                                    Architecto iure, rerum molestias provident suscipit dolorum nisi in.</p>
+                                <p>***** (19 opiniones)</p>
+                            </div>
+                            <div>
+                                <h3>Disponibilidad del producto</h3>
+                                <p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        enable-background="new 0 0 24 24" fill="#333333"
+                                        class="sc-gFqAkR gVEpJH sc-hSzcnm XONYk">
+                                        <path
+                                            d="M2 6v11c0 .6.4 1 1 1h1.2c.4 1.2 1.5 2 2.8 2s2.4-.8 2.8-2h3.4c.4 1.2 1.5 2 2.8 2s2.4-.8 2.8-2H21c.6 0 1-.4 1-1v-6c0-2.2-1.8-4-4-4h-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2zm12 0v8.8c-.4.3-.6.7-.8 1.2H9.8c-.4-1.2-1.5-2-2.8-2s-2.4.8-2.8 2H4V6h10zm6 10h-1.2c-.4-1.2-1.5-2-2.8-2V9h2c1.1 0 2 .9 2 2v5zm-5 1c0-.6.4-1 1-1s1 .4 1 1-.4 1-1 1-1-.4-1-1zm-9 0c0-.6.4-1 1-1s1 .4 1 1-.4 1-1 1-1-.4-1-1z">
+                                        </path>
+                                        <path d="M17 10h2v2h-2z"></path>
+                                    </svg> Envío: <strong>Gratis.</strong> | Devolución: <strong>Gratis.</strong>
+                                </p>
+                                <p> </p>
+                            </div>
+                            <div>
+                                <h3>Garantías</h3>
+                                <input type="checkbox" checked disabled> Garantía de envio al 100%. <br>
+                                <input type="checkbox" checked disabled> Garantía del fabrincante en caso de
+                                desperfecto.
+                            </div>
+                        </aside>
+                        <div class="static-card">
+                            <div>
+                                <p>Tan solo por <del>21.99</del> <strong>19.99€</strong></p>
+                                <div class="selectorCantidad">
+                                    <button onclick="menos()">-</button><input type="number" id="cantidad" value="0"><button
+                                        onclick="mas()">+</button>
+                                    <script>
+                                        function mas() {
+                                            var inputCantidad = document.getElementById('cantidad');
+                                            inputCantidad.value = parseInt(inputCantidad.value) + 1;
+                                        }
+            
+                                        function menos() {
+                                            var inputCantidad = document.getElementById('cantidad');
+                                            var currentValue = parseInt(inputCantidad.value);
+                                            if (currentValue > 0) {
+                                                inputCantidad.value = currentValue - 1;
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <button class="carrito">Agregar al carrito.</button>
+                                <button class="comprar">Comprar Ahora.</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="comentarios">
+                <h2>Comentarios y Opiniones</h2>
+            
+                <div class="comentario">
+                    <span class="nombre">Usuario1:</span>
+                    <span class="estrellas">★★★★★</span>
+                    <p>¡Este producto es increíble! Lo recomendaría a todos.</p>
+                </div>
+            
+                <div class="comentario">
+                    <span class="nombre">Usuario2:</span>
+                    <span class="estrellas">★★★☆☆</span>
+                    <p>Me gustó, pero creo que podría haber algunas mejoras.</p>
+                </div>     
+            </section>
         </div>
     </main>
     <footer>
@@ -75,5 +214,9 @@
             <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

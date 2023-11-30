@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,25 @@
             <button id="menu" onclick="estiloBoton(this)"></button>
             <div class="sub-menu" id="dropMenu">
                 <ul>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme(){
+                                let valor = document.getElementById('theme').checked;
+    
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Pages/newprofile.html">Perfil</a></li>
                     <li><a href="../Pages/help.html">Ayuda</a></li>
@@ -30,7 +49,7 @@
             const button = document.getElementById('menu');
             const dropmenu = document.getElementById('dropMenu');
             let isBackgroundChanged;
-        
+
             // Agrega o elimina la clase 'menu-open' al botón y modifica la visibilidad del dropMenu
             function estiloBoton() {
                 if (button.style.backgroundImage === "./SRC/icons8-menu-120.png") {
@@ -44,7 +63,7 @@
                     console.log("true");
                 } else {
                     dropmenu.classList.add('slide-out-right');
-                    setTimeout( function() {
+                    setTimeout(function () {
                         button.classList.remove('menu-open');
                         dropMenu.classList.remove('drop-on');
                         button.style.position = "absolute";

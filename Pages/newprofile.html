@@ -20,6 +20,25 @@
             <button id="menu" onclick="estiloBoton(this)"></button>
             <div class="sub-menu" id="dropMenu">
                 <ul>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme(){
+                                let valor = document.getElementById('theme').checked;
+    
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Pages/newprofile.html">Perfil</a></li>
                     <li><a href="../Pages/help.html">Ayuda</a></li>

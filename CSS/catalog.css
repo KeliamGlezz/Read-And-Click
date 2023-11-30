@@ -1,12 +1,12 @@
 body{
-    background: linear-gradient(180deg, rgba(241,110,0,1) 0%, rgba(229,124,35,1) 0%, var(--main-gray) 100%);
+    background: linear-gradient(180deg, var(--main-bg) 0%, var(--second-color) 100%);
     font-family: "Comic-Neue";
     height: 100%;
 }
 
 .landing {
-    color: white;
-    background-color: var(--second-orange);
+    color: var(--white);
+    background-color: var(--second-color);
 }
 
 .landing h2{
@@ -61,7 +61,7 @@ body{
 
 
 .producto a{
-    background-color: white;
+    background-color: var(--white);
     background-image: url(../SRC/compra3.png);
     background-size: contain;
     padding: 10px;
