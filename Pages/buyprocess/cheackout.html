@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <title>Read & Click.</title>
+    <link rel="shortcut icon" href="../../SRC/keliam.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/cheackout.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="../../SRC/keliam.png" alt="">
+            <h1>Read & Click</h1>
+        </div>
+        <nav class="nav-menu" id="nav">
+            <button id="menu" onclick="estiloBoton(this)"></button>
+            <div class="sub-menu" id="dropMenu">
+                <ul>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme() {
+                                let valor = document.getElementById('theme').checked;
+
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../newprofile.html">Perfil</a></li>
+                    <li><a href="../help.html">Ayuda</a></li>
+                    <li><a href="../aboutUs.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const button = document.getElementById('menu');
+            const dropmenu = document.getElementById('dropMenu');
+            let isBackgroundChanged;
+
+            // Agrega o elimina la clase 'menu-open' al botón y modifica la visibilidad del dropMenu
+            function estiloBoton() {
+                if (button.style.backgroundImage === "./SRC/icons8-menu-120.png") {
+                    isBackgroundChanged = false;
+                }
+                if (!isBackgroundChanged) {
+                    dropmenu.classList.remove('slide-out-right');
+                    button.classList.add('menu-open');
+                    dropMenu.classList.add('drop-on');
+                    button.style.position = "fixed";
+                    console.log("true");
+                } else {
+                    dropmenu.classList.add('slide-out-right');
+                    setTimeout(function () {
+                        button.classList.remove('menu-open');
+                        dropMenu.classList.remove('drop-on');
+                        button.style.position = "absolute";
+                        console.log("false");
+                        dropmenu.classList.remove('slide-out-right');
+                    }, 500);
+                }
+                isBackgroundChanged = !isBackgroundChanged;
+            }
+        </script>
+    </header>
+    <div class="landing">
+        <div class="route">
+            <span class="step" id="selected">
+                1
+            </span>
+            <hr>
+            <span class="step">
+                2
+            </span>
+            <hr>
+            <span class="step">
+                3
+            </span>
+            <hr>
+            <span class="step">
+                4
+            </span>
+        </div>
+        <div class="cesta">
+            <div class="head-cesta">
+                <h3>Mi Cesta</h3>
+                <p> 3 artículos</p>
+            </div>
+            <div class="body-cesta">
+                <div class="articles-cesta">
+                    <div class="product">
+                        <img src="../../SRC/comics/comic2.png" alt="">
+                        <div class="product-body">
+                            <div class="product-head">
+                                <div class="description">
+                                    <h3>Comic 1 Superman</h3>
+                                    <p><del>9.99</del> <em>6.99€</em></p>
+                                </div>
+                                <div class="cant">
+                                    <button disabled>
+                                        -
+                                    </button>
+                                    <input value="1">
+                                    <button>
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="garantia">
+                                <h3>Garantías</h3>
+                                <input type="checkbox" checked disabled> Garantía de envio al 100%. <br>
+                                <input type="checkbox" checked disabled> Garantía del fabrincante en caso de
+                                desperfecto.
+                                <p><a href="">Eliminar producto</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="../../SRC/comics/comic5.png" alt="">
+                        <div class="product-body">
+                            <div class="product-head">
+                                <div class="description">
+                                    <h3>Comic 1 Superman</h3>
+                                    <p>9.99€</p>
+                                </div>
+                                <div class="cant">
+                                    <button disabled>
+                                        -
+                                    </button>
+                                    <input value="1">
+                                    <button>
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="garantia">
+                                <h3>Garantías</h3>
+                                <input type="checkbox" checked disabled> Garantía de envio al 100%. <br>
+                                <input type="checkbox" checked disabled> Garantía del fabrincante en caso de
+                                desperfecto.
+                                <p><a href="">Eliminar producto</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="../../SRC/comics/comic1.png" alt="">
+                        <div class="product-body">
+                            <div class="product-head">
+                                <div class="description">
+                                    <h3>Comic 1 Superman</h3>
+                                    <p>9.99€</p>
+                                </div>
+                                <div class="cant">
+                                    <button disabled>
+                                        -
+                                    </button>
+                                    <input value="1">
+                                    <button>
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="garantia">
+                                <h3>Garantías</h3>
+                                <input type="checkbox" checked disabled> Garantía de envio al 100%. <br>
+                                <input type="checkbox" checked disabled> Garantía del fabrincante en caso de
+                                desperfecto.
+                                <p><a href="">Eliminar producto</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-cesta" style="margin-left: 10px !important; padding: 10px;">
+                    <div class="resume-total">
+                        <p>Total (Impuestos incluidos)</p>
+                        <p><strong>19.99€</strong></p>
+                    </div>
+                    <a href="./envio.html" class="carrito">Realizar pedido.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>divección: 123 Calle Principal, Ciudad</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Correo electrónico: micorreo@dominio.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

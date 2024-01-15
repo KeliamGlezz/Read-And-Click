@@ -1,0 +1,34 @@
+.listo{
+    height: 100vh;
+}
+.listo div{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gracias{
+    flex-direction: column;
+    font-family: "DK Frozen";
+    text-align: center;
+    color: var(--white);
+}
+.gracias h2{
+    width: 70%;
+}
+#logoT{
+    width: 50%;
+    margin: 0 auto;
+}
+.gracias a{
+    padding: 8px;
+    width: 70%;
+    box-sizing: border-box;
+    border-radius: 9px;
+    margin: 10px auto;
+    text-shadow: 1px 2px black;
+    border: solid 2px var(--alternative);
+    background-color: var(--second-color);
+    box-shadow: 4px 4px var(--alternative);
+    font-family: "DK Frozen";
+}

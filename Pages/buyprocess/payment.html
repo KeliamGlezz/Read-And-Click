@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <title>Read & Click.</title>
+    <link rel="shortcut icon" href="../../SRC/keliam.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/cheackout.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="../../SRC/keliam.png" alt="">
+            <h1>Read & Click</h1>
+        </div>
+        <nav class="nav-menu" id="nav">
+            <button id="menu" onclick="estiloBoton(this)"></button>
+            <div class="sub-menu" id="dropMenu">
+                <ul>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme() {
+                                let valor = document.getElementById('theme').checked;
+
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../newprofile.html">Perfil</a></li>
+                    <li><a href="../help.html">Ayuda</a></li>
+                    <li><a href="../aboutUs.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const button = document.getElementById('menu');
+            const dropmenu = document.getElementById('dropMenu');
+            let isBackgroundChanged;
+
+            // Agrega o elimina la clase 'menu-open' al botón y modifica la visibilidad del dropMenu
+            function estiloBoton() {
+                if (button.style.backgroundImage === "./SRC/icons8-menu-120.png") {
+                    isBackgroundChanged = false;
+                }
+                if (!isBackgroundChanged) {
+                    dropmenu.classList.remove('slide-out-right');
+                    button.classList.add('menu-open');
+                    dropMenu.classList.add('drop-on');
+                    button.style.position = "fixed";
+                    console.log("true");
+                } else {
+                    dropmenu.classList.add('slide-out-right');
+                    setTimeout(function () {
+                        button.classList.remove('menu-open');
+                        dropMenu.classList.remove('drop-on');
+                        button.style.position = "absolute";
+                        console.log("false");
+                        dropmenu.classList.remove('slide-out-right');
+                    }, 500);
+                }
+                isBackgroundChanged = !isBackgroundChanged;
+            }
+        </script>
+    </header>
+    <div class="landing">
+        <div class="route">
+            <a href="./cheackout.html">
+                <span class="step" id="completed">
+                    ✔
+                </span>
+            </a>
+            <hr>
+            <a href="./envio.html">
+                <span class="step" id="completed">
+                    ✔
+                </span>
+            </a>
+            <hr>
+            <span class="step" id="selected">
+                3
+            </span>
+            <hr>
+            <span class="step">
+                4
+            </span>
+        </div>
+        <div class="cesta">
+            <div class="head-cesta">
+                <h3 style="text-decoration: underline; margin-bottom: 20px;">Método de pago.</h3>
+                <div class="product select-addr">
+                    <div class="product icon" id="toogle-addr">
+                        <img src="https://cdn.pccomponentes.com/prod/img/iconos/visaWhite_32x32.svg" alt="">
+                        <p>Tarjeta de Débito.</p>
+                    </div>
+                    <div class="product icon">
+                        <img src="https://cdn.pccomponentes.com/prod/img/iconos/32-mastercard.svg" alt="">
+                        <p>Tarjeta de Crédito.</p>
+                    </div>
+                    <div class="product icon">
+                        <img src="https://cdn.pccomponentes.com/Unilae/svg/bizum_32x32.svg" alt="">
+                        <p>Bizum / Financiación.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="body-cesta pay-div">
+                <div class="articles-cesta envio">
+                    <div>
+                        <div class="description">
+                            <h3 style="text-decoration: underline; margin-top: 15px;">Tarjeta de Débito</h3>
+                            <div class="product addr colum">
+                                <div class="payment-method">
+                                    <label for="nombre">
+                                        <p>Titular de la tarjeta</p>
+                                        <input type="text" id="nombre" placeholder="Nombre del títular" style="width: 90%;" disabled>
+                                    </label>
+                                    <div class="line">
+                                        <label for="cvv">
+                                            <p>Fecha de expiración</p>
+                                            <input inputmode="numeric" id="cvv" placeholder="MM/AA" disabled>
+                                        </label>
+                                        <label for="cvv">
+                                            <p>Titular de la tarjeta</p>
+                                            <input type="text" id="cvv" placeholder="3 dígitos" disabled>
+                                        </label>
+                                    </div>
+                                    <label for="numero">
+                                        <p>Número de la tarjeta</p>
+                                        <input type="text" id="numero" placeholder="Nombre del títular" style="width: 90%;" disabled>
+                                    </label>
+                                </div>
+                                <label for="check" class="line">
+                                    <input type="checkbox" id="check" checked>
+                                    <p>Guardar para futuras compras. Activando esta casilla completarás futuras compras
+                                        en nuestra tienda de forma más rápida y cómoda.</p>
+                                </label>
+                                <label for="radio" class="line">
+                                    <input type="radio" id="check" disabled>
+                                    <p>Utilizar el metodo de pago por defecto</p>
+                                </label>
+                                <div>
+                                    <div class="edit pay-edit">
+                                        <button class="product">Eliminar</button>
+                                        <button class="product" id="save">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-cesta cesta-pay">
+                    <div class="resume-total">
+                        <div class="resume-envio pay-envio">
+    
+                            <h3 style="text-decoration: underline;">Resumen</h3>
+                            <hr>
+                            <span class="line">
+                                <p>Subtotal artículos:</p>
+                                <p><strong>19.99€</strong></p>
+                            </span>
+                            <span class="line">
+                                <p>Gastos de envio:</p>
+                                <p><strong>9.99€</strong></p>
+                            </span>
+                            <hr>
+                            <span class="line">
+                                <p>Total artículos:</p>
+                                <p><strong>29.98€</strong></p>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="./thnxs.html" class="carrito">¡Comprar!</a>
+                </div>
+            </div>
+            <hr class="separar">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Correo electrónico: micorreo@dominio.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

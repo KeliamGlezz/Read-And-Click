@@ -1,0 +1,513 @@
+.landing {
+    padding: 10px 0px;
+    background-color: var(--main-bg);
+}
+
+.route hr {
+    height: 5px;
+    background-color: var(--second-bg);
+    border: none;
+    border-radius: 20px;
+    width: 40%;
+    margin: 20px 15px;
+}
+
+.route {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--white);
+    width: 70%;
+    border-radius: 15px;
+    padding: 0 10px;
+    box-shadow: 4px 4px var(--alternative);
+    border: solid 2px var(--alternative);
+}
+
+.step {
+    font-family: "Comic-Neue";
+    color: var(--white);
+    font-weight: bolder;
+    background-color: var(--second-bg);
+    padding: 2px 10px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+#selected {
+    background-color: var(--alternative);
+    border: solid 2px var(--second-bg);
+    color: cyan;
+}
+
+#completed {
+    background-color: var(--second-color);
+    border: solid 2px var(--second-bg);
+    padding: 2px 8px;
+}
+
+.route a {
+    text-decoration: none;
+}
+
+.cesta {
+    margin: 10px auto;
+    width: 90%;
+    border-radius: 15px;
+    background-color: var(--white);
+    padding: 10px;
+    box-shadow: 4px 4px var(--alternative);
+    border: solid 2px var(--alternative);
+}
+
+.step a {
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.cesta h3 {
+    margin: 0 10px;
+    font-family: "Comic Sans MS";
+    font-weight: bolder;
+    color: var(--alternative);
+}
+
+.cesta p {
+    margin: 0 10px;
+    font-family: "Comic-Neue";
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.body-cesta {
+    display: flex;
+}
+
+.envio {
+    width: 100%;
+}
+
+/*
+    margin: 10px auto;
+    border-radius: 15px;
+    background-color: var(--white);
+    box-shadow: 4px 4px var(--alternative);
+*/
+.resume-cesta {
+    height: 110px;
+    color: var(--alternative);
+    width: 100%;
+    background: var(--white);
+    padding: 0px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    left: 0px;
+    margin: 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.14) 4px -5px 9px, rgba(0, 0, 0, 0.12) 3px -10px 10px !important;
+}
+
+.resume-cesta div {
+    margin: 0px;
+    border: none;
+    box-shadow: none;
+}
+
+.resume-total strong {
+    font-family: "Comic Sans MS";
+    color: black;
+    font-weight: bolder;
+}
+
+.resume-total p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.resume-total {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.resume-cesta a {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    width: 80%;
+    margin: 0 auto 10px;
+    font-size: 24px;
+    color: var(--main-color);
+    border-radius: 15px;
+    background-color: var(--main-bg);
+    font-family: "DK Frozen";
+    text-shadow: 3px 3px 0 var(--alternative);
+    border: solid 2px var(--alternative);
+    box-shadow: 4px 4px var(--alternative);
+    transition: all 0.6s;
+}
+
+.sc-gFqAkR.gVEpJH.sc-hSzcnm.XONYk {
+    width: 30px;
+    height: 30px;
+}
+
+.product {
+    margin: 0px !important;
+    margin-top: 1.5rem !important;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 1rem;
+    box-sizing: border-box;
+    border-radius: 9px;
+    margin: 10px auto;
+    border: solid 2px var(--alternative);
+    background-color: var(--white);
+    box-shadow: 4px 4px var(--alternative);
+
+    display: flex;
+    flex-direction: row;
+    transition: all 0.6s;
+}
+
+.product img {
+    width: 30%;
+    height: 100%;
+    margin: 5px;
+}
+
+.product-head {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30%;
+    justify-content: space-between;
+}
+
+.description {
+    margin-bottom: 5px;
+}
+
+.cant {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    width: 30%;
+    margin: 5px;
+    justify-content: flex-end;
+}
+
+.cant * {
+    width: 100%;
+}
+
+.cant input {
+    width: 20px;
+    text-align: center;
+}
+
+.cant button {
+    background-color: var(--second-bg);
+    color: var(--white);
+    width: 15px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+}
+
+.cant button:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+}
+
+.cant button:last-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+}
+
+.garantia {
+    width: 100%;
+    font-family: "Comic-Neue";
+    font-weight: bolder;
+}
+
+.garantia a {
+    color: var(--alternative);
+    font-size: 15px;
+    text-shadow: none;
+    font-weight: bolder;
+    font-family: "Comic Sans MS";
+}
+
+.product-body {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.select-addr {
+    margin: 0 auto !important;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    background-color: var(--alternative);
+}
+
+.select-addr .product {
+    margin-top: 0px !important;
+    border-radius: 8px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon svg {
+    width: 45%;
+}
+
+.icon p {
+    text-align: center;
+    font-size: 90%;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+}
+
+h4 {
+    margin: 0 0px;
+    font-size: 15px;
+    text-decoration: underline;
+    font-family: "Comic Sans MS";
+    font-weight: bolder;
+    color: var(--alternative);
+}
+
+.addr {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.edit .product {
+    margin-top: 0px !important;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    border-radius: 5px;
+    background-color: var(--second-bg);
+    font-family: "Comic Sans MS";
+    font-weight: bolder;
+    font-size: 15px;
+    text-shadow: 3px 3px 0 var(--alternative);
+}
+
+.separar {
+    margin-top: 20px;
+    width: 90%;
+    height: 5px;
+    border-radius: 10px;
+    border: solid 2px var(--alternative);
+    background-color: var(--second-bg);
+    box-shadow: 4px 4px var(--alternative);
+}
+
+#toogle-addr {
+    color: var(--white);
+    text-shadow: 1px 1px 0 black;
+    background-color: var(--main-color);
+}
+
+.resume-envio {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 65%;
+}
+
+.resume-envio p {
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.resume-envio .line {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-envio hr {
+    width: 90%;
+    border-bottom: dotted gray;
+    border-top: none;
+}
+
+footer {
+    padding-bottom: 150px;
+}
+
+.icon img {
+    width: 20%;
+}
+
+.payment-method input {
+    padding: 5px;
+}
+
+.payment-method p {
+    margin: 0px;
+}
+
+.colum {
+    display: flex;
+    flex-direction: column !important;
+}
+.pay-div{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+#save{
+    background-color: var(--second-color) !important;
+    text-shadow: 1px 1px black;
+}
+
+@media (min-width: 768px) {
+    .icon svg {
+        width: 25%;
+    }
+
+    .icon p {
+        font-size: 100%;
+    }
+}
+.cesta-pay{
+    height: 230px;
+}
+.pay-envio{
+    margin-top: 10px !important;
+    width: 90%;
+}
+
+@media (min-width: 1024px) {
+    .edit {
+        justify-content: flex-start;
+    }
+
+    .edit .product {
+        width: 100% !important;
+    }
+
+    .addr {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .cesta {
+        width: 80%;
+    }
+
+    .product {
+        margin: 0px;
+    }
+
+    .articles-cesta {
+        margin: auto;
+        flex-direction: column;
+        justify-content: start;
+        gap: 10px;
+        display: flex;
+        width: 90%;
+    }
+
+    .product img {
+        height: 100%;
+    }
+
+    .head-cesta {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .resume-cesta {
+        margin-top: 1.5rem !important;
+        padding: 0px;
+        position: relative;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 150px;
+        width: 30%;
+        border-radius: 15px;
+        border: solid 2px var(--alternative);
+        background-color: var(--white);
+        box-shadow: 4px 4px var(--alternative) !important;
+    }
+    .cesta-pay p{
+        font-size: 14px;
+    }
+    .cesta-pay{
+        height: 260px;
+        margin-bottom: 5px !important;
+    }
+
+    .cesta-envio {
+        width: 100% !important;
+        padding-bottom: 10px;
+    }
+    .pay-envio{
+        width: 90%;
+    }
+
+    footer {
+        padding-bottom: 0px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .product img {
+        width: 20%;
+    }
+
+    .product {
+        width: 80%;
+    }
+
+    .articles-cesta {
+        align-items: end;
+        margin-right: 20px;
+    }
+
+    .envio {
+        margin: 0 auto !important;
+    }
+
+    .envio div {
+        width: 100%;
+    }
+}

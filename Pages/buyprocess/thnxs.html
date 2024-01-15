@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <title>Read & Click.</title>
+    <link rel="shortcut icon" href="../../SRC/keliam.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/cheackout.css">
+    <link rel="stylesheet" href="../../CSS/thnxs.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="../../SRC/keliam.png" alt="">
+            <h1>Read & Click</h1>
+        </div>
+        <nav class="nav-menu" id="nav">
+            <button id="menu" onclick="estiloBoton(this)"></button>
+            <div class="sub-menu" id="dropMenu">
+                <ul>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme() {
+                                let valor = document.getElementById('theme').checked;
+
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../newprofile.html">Perfil</a></li>
+                    <li><a href="../help.html">Ayuda</a></li>
+                    <li><a href="../aboutUs.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const button = document.getElementById('menu');
+            const dropmenu = document.getElementById('dropMenu');
+            let isBackgroundChanged;
+
+            // Agrega o elimina la clase 'menu-open' al botón y modifica la visibilidad del dropMenu
+            function estiloBoton() {
+                if (button.style.backgroundImage === "./SRC/icons8-menu-120.png") {
+                    isBackgroundChanged = false;
+                }
+                if (!isBackgroundChanged) {
+                    dropmenu.classList.remove('slide-out-right');
+                    button.classList.add('menu-open');
+                    dropMenu.classList.add('drop-on');
+                    button.style.position = "fixed";
+                    console.log("true");
+                } else {
+                    dropmenu.classList.add('slide-out-right');
+                    setTimeout(function () {
+                        button.classList.remove('menu-open');
+                        dropMenu.classList.remove('drop-on');
+                        button.style.position = "absolute";
+                        console.log("false");
+                        dropmenu.classList.remove('slide-out-right');
+                    }, 500);
+                }
+                isBackgroundChanged = !isBackgroundChanged;
+            }
+        </script>
+    </header>
+    <div class="landing">
+        <div class="route">
+            <a href="./cheackout.html">
+                <span class="step" id="completed">
+                    ✔
+                </span>
+            </a>
+            <hr>
+            <a href="./envio.html">
+                <span class="step" id="completed">
+                    ✔
+                </span>
+            </a>
+            <hr>
+            <a href="./payment.html">
+                <span class="step" id="completed">
+                    ✔
+                </span>
+            </a>
+            <hr>
+            <span class="step" id="selected">
+                4
+            </span>
+        </div>
+        <div class="listo">
+            <div>
+                <div class="gracias">
+                    <img src="../../SRC/keliam.png" id="logoT">
+                    <h1>Proceso de compra realizado con exito!</h1>
+                    <h2>Muchas gracias por confiar en Read & Click</h2>
+                    <a href="../../index.html">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Correo electrónico: micorreo@dominio.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

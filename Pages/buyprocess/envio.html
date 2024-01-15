@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <title>Read & Click.</title>
+    <link rel="shortcut icon" href="../../SRC/keliam.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/cheackout.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="../../SRC/keliam.png" alt="">
+            <h1>Read & Click</h1>
+        </div>
+        <nav class="nav-menu" id="nav">
+            <button id="menu" onclick="estiloBoton(this)"></button>
+            <div class="sub-menu" id="dropMenu">
+                <ul>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme() {
+                                let valor = document.getElementById('theme').checked;
+
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../newprofile.html">Perfil</a></li>
+                    <li><a href="../help.html">Ayuda</a></li>
+                    <li><a href="../aboutUs.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const button = document.getElementById('menu');
+            const dropmenu = document.getElementById('dropMenu');
+            let isBackgroundChanged;
+
+            // Agrega o elimina la clase 'menu-open' al botón y modifica la visibilidad del dropMenu
+            function estiloBoton() {
+                if (button.style.backgroundImage === "./SRC/icons8-menu-120.png") {
+                    isBackgroundChanged = false;
+                }
+                if (!isBackgroundChanged) {
+                    dropmenu.classList.remove('slide-out-right');
+                    button.classList.add('menu-open');
+                    dropMenu.classList.add('drop-on');
+                    button.style.position = "fixed";
+                    console.log("true");
+                } else {
+                    dropmenu.classList.add('slide-out-right');
+                    setTimeout(function () {
+                        button.classList.remove('menu-open');
+                        dropMenu.classList.remove('drop-on');
+                        button.style.position = "absolute";
+                        console.log("false");
+                        dropmenu.classList.remove('slide-out-right');
+                    }, 500);
+                }
+                isBackgroundChanged = !isBackgroundChanged;
+            }
+        </script>
+    </header>
+    <div class="landing">
+        <div class="route">
+            <a href="./cheackout.html">
+                <span class="step" id="completed">
+                    ✔</a>
+            </span>
+            </a>
+            <hr>
+            <span class="step" id="selected">
+                2
+            </span>
+            <hr>
+            <span class="step">
+                3
+            </span>
+            <hr>
+            <span class="step">
+                4
+            </span>
+        </div>
+        <div class="cesta">
+            <div class="head-cesta">
+                <h3 style="text-decoration: underline; margin-bottom: 20px;">Direccion de envío</h3>
+                <div class="product select-addr">
+                    <div class="product icon" id="toogle-addr">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                            data-testid="places_home" class="sc-dcJsrY fYhzFh">
+                            <path
+                                d="M17 22h-2c-1.1 0-2-.9-2-2v-3h-2v3c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2v-6H3c-.4 0-.8-.2-.9-.6-.2-.4-.1-.8.2-1.1l9-9c.4-.4 1-.4 1.4 0l9 9c.3.3.4.7.2 1.1-.1.4-.5.6-.9.6h-2v6c0 1.1-.9 2-2 2zm-7-7h4c.6 0 1 .4 1 1v4h2v-7c0-.6.4-1 1-1h.6L12 5.4 5.4 12H6c.6 0 1 .4 1 1v7h2v-4c0-.6.4-1 1-1z">
+                            </path>
+                        </svg>
+                        <p>Entrega a domicilio.</p>
+                    </div>
+                    <div class="product icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                            data-testid="location_pin" class="sc-dcJsrY fYhzFh">
+                            <path
+                                d="M12 12c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm0-4c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z">
+                            </path>
+                            <path
+                                d="M12 22.7C9.6 19.5 5 12.9 5 9c0-3.9 3.1-7 7-7s7 3.1 7 7-4.6 10.5-7 13.7zM12 4C9.2 4 7 6.2 7 9c0 2.6 3.1 7.6 5 10.3 1.9-2.7 5-7.7 5-10.3 0-2.8-2.2-5-5-5z">
+                            </path>
+                        </svg>
+                        <p>Punto de Entrega.</p>
+                    </div>
+                    <div class="product icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                            data-testid="store" class="sc-dcJsrY fYhzFh">
+                            <path
+                                d="M22.9 10.6l-3-8c-.1-.3-.5-.6-.9-.6H5c-.4 0-.8.3-.9.6l-3 8c-.2.4-.1.7.1 1 .2.2.5.4.8.4h1v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9h1c.3 0 .6-.2.8-.4.2-.3.3-.6.1-1zm-2.3-.6h-2.8l-1.5-6h2l2.3 6zM8.3 10l1.5-6H11v6H8.3zM13 4h1.2l1.5 6H13V4zM5.7 4h2l-1.5 6H3.4l2.3-6zM14 20v-5h2v5h-2zm5 0h-1v-6c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1v6H5v-8h14v8z">
+                            </path>
+                            <path d="M7 18h3c.6 0 1-.4 1-1v-3c0-.6-.4-1-1-1H7c-.6 0-1 .4-1 1v3c0 .6.4 1 1 1z"></path>
+                        </svg>
+                        <p>Recoger en tienda.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="body-cesta">
+                <div class="articles-cesta envio">
+                    <div>
+                        <div class="description">
+                            <h3 style="text-decoration: underline; margin-top: 15px;">Direcciones de envio</h3>
+                            <div class="product addr">
+                                <div>
+                                    <span class="line">
+                                        <input type="radio" checked>
+                                        <h4>Nombre Apellido1</h4>
+                                    </span>
+                                    <span class="line" style="margin-bottom: 10px;">
+                                        <p>Direccion con numero, municipio y codigo postal</p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="edit">
+                                        <button class="product">Eliminar</button>
+                                        <button class="product">Editar</button>
+                                    </div>
+                                    <div class="edit" style="margin-top: 10px;">
+                                        <button class="product" style="width: 80%;" id="agregar-addr">Agregar otra
+                                            direccion</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr class="separar">
+                    <div>
+                        <div class="description">
+                            <h3 style="text-decoration: underline; margin-top: 20px;">Direcciones de Facturacion</h3>
+                            <div class="product addr">
+                                <div>
+                                    <span class="line">
+                                        <input type="radio" checked>
+                                        <h4>Nombre Apellido1</h4>
+                                    </span>
+                                    <span class="line" style="margin-bottom: 10px;">
+                                        <p>Direccion con numero, municipio y codigo postal</p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="edit">
+                                        <button class="product">Eliminar</button>
+                                        <button class="product">Editar</button>
+                                    </div>
+                                    <div class="edit" style="margin-top: 10px;">
+                                        <button class="product" style="width: 80%;" id="agregar-addr">Agregar otra
+                                            direccion</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resume-cesta cesta-envio" style="height: 150px;">
+                            <div class="resume-total">
+                                <div class="resume-envio">
+
+                                    <h3 style="text-decoration: underline;">Resumen</h3>
+                                    <hr>
+                                    <span class="line">
+                                        <p>Subtotal artículos:</p>
+                                        <p><strong>19.99€</strong></p>
+                                    </span>
+                                    <span class="line">
+                                        <p>Gastos de envio:</p>
+                                        <p><strong>9.99€</strong></p>
+                                    </span>
+                                </div>
+                            </div>
+                            <a href="./payment.html" class="carrito">Guardar y continuar.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Correo electrónico: micorreo@dominio.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
