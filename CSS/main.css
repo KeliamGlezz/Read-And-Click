@@ -289,7 +289,7 @@ header {
   cursor: pointer;
   outline: none;
   z-index: 4;
-  right: 7px;
+  right: 33px;
   top: 15px;
 }
 
@@ -324,12 +324,12 @@ header {
   margin: 0;
   padding: 0;
   height: 80%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
 .sub-menu li {
-  width: 30%;
+  width: 40%;
 }
 
 .sub-menu li button {
@@ -407,8 +407,6 @@ input:checked + .slider:before {
 */
 
 li>.switch {
-  float: right;
-  left: 30px;
   height: 40px;
   width: 55px;
 }
@@ -546,7 +544,7 @@ li a {
   background-color: var(--white);
   border-radius: 20px;
   padding: 15px;
-  width: 100%;
+  /*width: 100%;*/
   box-shadow: -2px 3px 0 black;
   ;
 }
@@ -613,7 +611,6 @@ main>h2 {
   display: flex;
   overflow: hidden;
   border: solid 4px rgba(255, 255, 255, 0.233);
-  padding: px;
 }
 
 /* Estilos para las imágenes dentro de los elementos 'producto' */
@@ -684,9 +681,9 @@ footer li {
   .sub-menu {
     clear: both;
     position: relative;
-    display: inline;
+    display: inline-block;
     background: none;
-    width: 80%;
+    width: 100%;
   }
 
   /*Estilos menu tabletas.*/
@@ -698,8 +695,9 @@ footer li {
     margin: 0;
     padding: 0;
     height: 80%;
-    justify-content: space-evenly;
-    gap: 40px;
+    justify-content: space-between;
+    transform: scale(0.9);
+    gap: 10px;
   }
 
   .sub-menu li button {
@@ -711,10 +709,10 @@ footer li {
     height: 70px;
   }
 
-  .sub-menu li:nth-child(5),
+  /*.sub-menu li:nth-child(5),
   .sub-menu li:nth-child(6) {
     display: none;
-  }
+  }*/
 
   .sub-menu li {
     width: 100%;

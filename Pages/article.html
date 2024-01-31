@@ -24,13 +24,13 @@
                 <ul>
                     <li>
                         <label class="switch">
-                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <input title="cambiar de tema" type="checkbox" id="theme" onchange="changeTheme()">
                             <span class="slider round"></span>
                         </label>
                         <script>
-                            function changeTheme() {
+                            function changeTheme(){
                                 let valor = document.getElementById('theme').checked;
-
+    
                                 if (!valor) {
                                     document.querySelector(':root').classList.add('light');
                                     document.querySelector(':root').classList.remove('dark');
@@ -44,7 +44,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Pages/newprofile.html">Perfil</a></li>
                     <li><a href="../Pages/help.html">Ayuda</a></li>
-                    <li><a href="../Pages/aboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="../Pages/aboutUs.html">Conócenos</a></li>
                 </ul>
             </div>
         </nav>
@@ -80,8 +80,7 @@
     </header>
     <main>
         <div class="landing">
-            <a href="../Pages/catalog.html">
-                < Volver al Catalogo.</a>
+            <a href="../Pages/catalog.html">Volver al Catalogo.</a>
                     <section>
                         <div class="main_content">
                             <div class="carousel_colum">
@@ -152,8 +151,8 @@
                                     </div>
                                     <div>
                                         <h3>Garantías</h3>
-                                        <input type="checkbox" checked disabled> Garantía de envio al 100%. <br>
-                                        <input type="checkbox" checked disabled> Garantía del fabrincante en caso de
+                                        <input type="checkbox" title="Garantía del envio" checked disabled> Garantía de envio al 100%. <br>
+                                        <input type="checkbox" title="Garantía del fabrincante" checked disabled> Garantía del fabrincante en caso de
                                         desperfecto.
                                     </div>
                                 </aside>
@@ -161,7 +160,7 @@
                                     <div>
                                         <p>Tan solo por <del>21.99</del> <strong>19.99€</strong></p>
                                         <div class="selectorCantidad">
-                                            <button onclick="menos()">-</button><input type="number" id="cantidad"
+                                            <button onclick="menos()">-</button><input type="number" title="cantidad de articulos" id="cantidad"
                                                 value="0"><button onclick="mas()">+</button>
                                             <script>
                                                 function mas() {
@@ -180,10 +179,8 @@
                                         </div>
                                     </div>
                                     <div class="buy">
-                                        <a href="../Pages/buyprocess/cheackout.html" class="carrito"><button>Agregar al
-                                                carrito.</button></a>
-                                        <a href="../Pages/buyprocess/cheackout.html" class="comprar"><button>Comprar
-                                                Ahora.</button></a>
+                                        <a href="../Pages/buyprocess/cheackout.html" class="carrito"><span>Agregar al carrito.</span></a>
+                                        <a href="../Pages/buyprocess/cheackout.html" class="comprar"><span>Comprar Ahora.</span></a>
                                     </div>
                                 </div>
                             </div>

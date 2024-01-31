@@ -154,8 +154,11 @@ section {
     height: 60px;
     justify-content: space-evenly
 }
-.carrito > button, .comprar > button{
-    padding: 8px;
+.carrito > span, .comprar > span{
+    text-align: center;
+    border: solid 2px black;
+    padding: 10px;
+    display: block;
     width: 90%;
     margin: 0 auto;
     color: var(--main-color);
@@ -165,7 +168,7 @@ section {
     text-shadow: 3px 3px 0 var(--alternative);
     font-size: 1rem;
 }
-.comprar button{
+.comprar span{
     background-color: var(--second-bg);
     color: var(--main-color);
 }

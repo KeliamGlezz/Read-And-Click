@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/main.css">
-    <link rel="stylesheet" href="../CSS/article.css">
+    <link rel="stylesheet" href="../CSS/abaoutUs.css">
     <link rel="shortcut icon" href="../SRC/keliam.png" type="image/x-icon">
     <title>Read & Click.</title>
 </head>
@@ -20,10 +22,29 @@
             <button id="menu" onclick="estiloBoton(this)"></button>
             <div class="sub-menu" id="dropMenu">
                 <ul>
+                    <li>
+                        <label class="switch">
+                            <input title="cambiar de tema" type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme() {
+                                let valor = document.getElementById('theme').checked;
+
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Pages/newprofile.html">Perfil</a></li>
                     <li><a href="../Pages/help.html">Ayuda</a></li>
-                    <li><a href="../Pages/aboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="../Pages/aboutUs.html">Conócenos</a></li>
                 </ul>
             </div>
         </nav>
@@ -59,8 +80,102 @@
     </header>
     <main>
         <div class="landing">
-            <h1>Pagina web en construccion, disculpe las molestias.</h1>
-        </div>
+            <h2>Información sobre actividad comercial o industrial.</h2>
+            <section>
+                En nuestra plataforma, nos dedicamos apasionadamente al fascinante mundo de los cómics. Somos un
+                punto de encuentro virtual para entusiastas, coleccionistas y amantes de las historietas, ofreciendo un
+                espacio único donde comprar, vender y explorar una extensa variedad de cómics que abarcan géneros,
+                épocas y estilos diversos. Nos enorgullece proporcionar a nuestra comunidad un ambiente seguro y
+                accesible para descubrir joyas ocultas, ampliar sus colecciones y conectarse con otros amantes del
+                noveno arte.
+            </section>
+            <h2>Equipo profesional.</h2>
+            <section>
+                En nuestra plataforma, nos dedicamos apasionadamente al fascinante mundo de los cómics. Somos un
+                punto de encuentro virtual para entusiastas, coleccionistas y amantes de las historietas, ofreciendo un
+                espacio único donde comprar, vender y explorar una extensa variedad de cómics que abarcan géneros,
+                épocas y estilos diversos. Nos enorgullece proporcionar a nuestra comunidad un ambiente seguro y
+                accesible para descubrir joyas ocultas, ampliar sus colecciones y conectarse con otros amantes del
+                noveno arte.
+            </section>
+            <div class="graphic-cont">
+                <div class="graphic">
+                    <img src="../SRC/graficos/grafica2png.png" alt="Cómic 1" class="img-fluid">
+                </div>
+                <div class="graphic">
+                    <img src="../SRC/graficos/grafica1.png" alt="Cómic 2" class="img-fluid">
+                </div>
+            </div>
+            <h2>Nuestra historia.</h2>
+            <section>
+                En nuestra plataforma, nos dedicamos apasionadamente al fascinante mundo de los cómics. Somos un
+                punto de encuentro virtual para entusiastas, coleccionistas y amantes de las historietas, ofreciendo un
+                espacio único donde comprar, vender y explorar una extensa variedad de cómics que abarcan géneros,
+                épocas y estilos diversos. Nos enorgullece proporcionar a nuestra comunidad un ambiente seguro y
+                accesible para descubrir joyas ocultas, ampliar sus colecciones y conectarse con otros amantes del
+                noveno arte.
+            </section>
+            <div class="container my-5" style="width: 90%;">
+                <div class="row justify-content-center">
+                    <!-- Agregamos 'justify-content-center' para centrar las columnas -->
+                    <div class="col-md-4">
+                        <div class="zoom-container">
+                            <img src="../SRC/comics/comic5.png" alt="Cómic 1" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="zoom-container">
+                            <img src="../SRC/comics/comic3.png" alt="Cómic 2" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="zoom-container">
+                            <img src="../SRC/comics/comic2.png" alt="Cómic 3" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex video-container">
+                <iframe src="https://www.youtube.com/embed/7JRBJ3Ldhsc" title="video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <a class="d-flex justify-content-center" href="transcription.html">Acceder a la transcipción del video</a>
+            <div class="container my-5">
+                <h2 class="mb-4">Nuestro Equipo</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Cargo</th>
+                            <th scope="col">Experiencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>John Doe</td>
+                            <td>CEO</td>
+                            <td>10+ años</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jane Smith</td>
+                            <td>Diseñador Gráfico</td>
+                            <td>8+ años</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Mario González</td>
+                            <td>Desarrollador Web</td>
+                            <td>7+ años</td>
+                        </tr>
+                        <!-- Puedes agregar más filas con datos aleatorios aquí -->
+                    </tbody>
+                </table>
+            </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -76,4 +191,5 @@
         </div>
     </footer>
 </body>
+
 </html>

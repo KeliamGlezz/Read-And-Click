@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/article.css">
+    <link rel="shortcut icon" href="../SRC/keliam.png" type="image/x-icon">
+    <title>Read & Click.</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="../SRC/keliam.png" alt="">
+            <h1>Read & Click</h1>
+        </div>
+        <nav class="nav-menu" id="nav">
+            <button id="menu" onclick="estiloBoton(this)"></button>
+            <div class="sub-menu" id="dropMenu">
+                <ul>
+                    <li>
+                        <label class="switch">
+                            <input title="cambiar de tema" type="checkbox" id="theme" onchange="changeTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                        <script>
+                            function changeTheme() {
+                                let valor = document.getElementById('theme').checked;
+
+                                if (!valor) {
+                                    document.querySelector(':root').classList.add('light');
+                                    document.querySelector(':root').classList.remove('dark');
+                                } else {
+                                    document.querySelector(':root').classList.remove('light');
+                                    document.querySelector(':root').classList.add('dark');
+                                }
+                            }
+                        </script>
+                    </li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Pages/newprofile.html">Perfil</a></li>
+                    <li><a href="../Pages/help.html">Ayuda</a></li>
+                    <li><a href="../Pages/aboutUs.html">Conócenos</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const button = document.getElementById('menu');
+            const dropmenu = document.getElementById('dropMenu');
+            let isBackgroundChanged;
+
+            // Agrega o elimina la clase 'menu-open' al botón y modifica la visibilidad del dropMenu
+            function estiloBoton() {
+                if (button.style.backgroundImage === "./SRC/icons8-menu-120.png") {
+                    isBackgroundChanged = false;
+                }
+                if (!isBackgroundChanged) {
+                    dropmenu.classList.remove('slide-out-right');
+                    button.classList.add('menu-open');
+                    dropMenu.classList.add('drop-on');
+                    button.style.position = "fixed";
+                    console.log("true");
+                } else {
+                    dropmenu.classList.add('slide-out-right');
+                    setTimeout(function () {
+                        button.classList.remove('menu-open');
+                        dropMenu.classList.remove('drop-on');
+                        button.style.position = "absolute";
+                        console.log("false");
+                        dropmenu.classList.remove('slide-out-right');
+                    }, 500);
+                }
+                isBackgroundChanged = !isBackgroundChanged;
+            }
+        </script>
+    </header>
+    <main>
+        <div class="landing">
+            <a href="aboutUs.html"><-Volver atras</a>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, minus dolore aut
+                        quibusdam, iste a
+                        laboriosam iure, praesentium accusamus blanditiis numquam quaerat aspernatur aperiam dolorum
+                        modi enim
+                        omnis nostrum porro?
+                        Minima optio exercitationem accusantium? Rerum, recusandae neque, labore voluptatum quas minus
+                        excepturi
+                        debitis est, tempore maiores deleniti temporibus consequuntur sit quos nisi totam dignissimos
+                        sunt
+                        possimus inventore. Alias, sapiente molestias.
+                        Nesciunt aliquid saepe voluptatem doloribus iste ex reprehenderit minus dolores excepturi sed
+                        eaque
+                        inventore exercitationem, tempora consequatur. Omnis nesciunt reiciendis non doloribus, saepe
+                        voluptatum
+                        officia beatae accusantium. Repellendus, quis voluptatibus.
+                        Voluptatum explicabo repudiandae numquam expedita excepturi accusantium, nisi ex quisquam
+                        dignissimos
+                        necessitatibus doloremque similique neque reprehenderit, beatae ullam aspernatur eveniet. Fugit
+                        pariatur
+                        officia consequatur libero. Esse sequi veniam nam fuga!
+                        Beatae aperiam fugiat amet cum inventore, quos dolores saepe, ipsum corrupti quaerat commodi
+                        enim quam
+                        natus alias libero? Molestiae eos doloribus ab harum nam aliquid quaerat impedit deleniti facere
+                        magnam?
+                        Error eaque nobis quam? Cum quidem quae porro suscipit obcaecati ab harum consequatur quibusdam
+                        recusandae ratione? Illum, quasi dolore provident cupiditate tempore voluptatibus aperiam
+                        dolorem
+                        deserunt incidunt nostrum qui? Saepe?
+                        Nihil totam possimus enim est odio ea ipsam fuga velit odit ad fugit dolor consequuntur
+                        mollitia, eum
+                        qui veniam illum aliquid vitae laborum commodi? Quasi accusantium velit dolorem dicta nostrum!
+                        Optio reprehenderit, dignissimos veniam iusto tempore dolores cum facilis a debitis deserunt,
+                        obcaecati
+                        explicabo beatae, hic incidunt tenetur dolorem. Enim, eaque! Inventore blanditiis sapiente quas
+                        quia
+                        quidem tempore, saepe quam!
+                        Unde mollitia neque at aliquid molestiae totam tenetur ab eos numquam distinctio asperiores quod
+                        et odio
+                        recusandae, nostrum iure assumenda dolor fuga atque quasi quo aperiam, quos quibusdam labore?
+                        Similique.
+                        Corrupti veritatis, aliquid et quibusdam ea quos sint optio nemo consequatur, voluptatem nihil
+                        unde
+                        voluptate error eligendi quisquam dolorum nulla recusandae. Ut, rerum. Qui iure voluptatem cum
+                        consequuntur vero corporis?</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nisi ratione quidem qui
+                        possimus quam iusto beatae odit placeat laborum doloribus minus error vel earum, asperiores
+                        natus est? Iusto, enim!
+                        Totam vitae ex voluptatibus sunt earum necessitatibus iste quam, reprehenderit voluptatem hic
+                        nulla ea in aut dolorem unde sequi voluptatum saepe nostrum praesentium sint velit? Adipisci
+                        doloribus officiis sunt maiores.
+                        Sapiente vel officia rerum quae assumenda necessitatibus optio quis perferendis corrupti quasi
+                        ratione autem, repudiandae commodi recusandae nobis vitae fuga culpa cumque sit facilis nemo
+                        mollitia! Nobis reiciendis molestiae quas.
+                        Asperiores minus dicta soluta modi veritatis deserunt quibusdam fuga explicabo, officia incidunt
+                        rem ut aliquid voluptatum animi molestias, eaque optio delectus quasi magnam praesentium
+                        eligendi natus quo nobis. Optio, quos.
+                        Temporibus qui placeat saepe expedita eveniet, minus deleniti dolorum autem esse excepturi eius
+                        laboriosam, ea tempora repellendus quia eaque ratione cupiditate laudantium voluptatem cumque!
+                        Repellendus quos odio vero a tempora!
+                    </p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Correo electrónico: micorreo@dominio.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

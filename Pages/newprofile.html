@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="../SRC/keliam.png" type="image/x-icon">
     <title>Read & Click.</title>
 </head>
-
 <body>
     <header>
         <div class="logo">
@@ -22,7 +21,7 @@
                 <ul>
                     <li>
                         <label class="switch">
-                            <input type="checkbox" id="theme" onchange="changeTheme()">
+                            <input title="cambiar de tema" type="checkbox" id="theme" onchange="changeTheme()">
                             <span class="slider round"></span>
                         </label>
                         <script>
@@ -42,7 +41,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Pages/newprofile.html">Perfil</a></li>
                     <li><a href="../Pages/help.html">Ayuda</a></li>
-                    <li><a href="../Pages/aboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="../Pages/aboutUs.html">Conócenos</a></li>
                 </ul>
             </div>
         </nav>
@@ -89,10 +88,10 @@
                 <h3>Mis Datos personales</h3>
                 <fieldset>
                     <div>
-                        <input type="text" placeholder="Nombre." value="Keliam" width="50" required>
-                        <input type="text" placeholder="Apellidos." value="Gonzalez" required>
+                        <input title="Nombre" type="text" placeholder="Nombre." value="Keliam" id="w-50" required>
+                        <input title="Apellidos" type="text" placeholder="Apellidos." value="Gonzalez" required>
                     </div>
-                    <input type="email" name="email" pattern="^[_A-Za-z0-9]+@[_A-Za-z0-9]+.[A-Za-z]+$"
+                    <input title="email" type="email" name="email" pattern="^[_A-Za-z0-9]+@[_A-Za-z0-9]+.[A-Za-z]+$"
                         value="keliamkeliam@keliam.keliam" required>
                     <div>
                         <select name="prefijo">
@@ -103,7 +102,7 @@
                             <option value="ING">+44</option>
                             <option value="RUS">+7</option>
                         </select>
-                        <input type="number" pattern="^[69]\d{8}$" value="999555666" required>
+                        <input title="Numero de telefono" type="number" pattern="^[69]\d{8}$" value="999555666" required>
                     </div>
                 </fieldset>
             </section>
@@ -111,21 +110,21 @@
                 <section>
                     <h3>Datos de facturacion.</h3>
                     <fieldset>
-                        <input type="text" placeholder="Dirección." value="mi calle, en mi edifico" required>
-                        <input type="text" placeholder="Apellidos." value="Gonzalez" required>
-                        <input type="email" name="email" pattern="^[_A-Za-z0-9]+@[_A-Za-z0-9]+.[A-Za-z]+$"
+                        <input title="Direccion" type="text" placeholder="Dirección." value="mi calle, en mi edifico" required>
+                        <input title="Apellidos" type="text" placeholder="Apellidos." value="Gonzalez" required>
+                        <input title="Correo electrónico" type="email" name="email" pattern="^[_A-Za-z0-9]+@[_A-Za-z0-9]+.[A-Za-z]+$"
                             value="keliamkeliam@keliam.keliam" required>
-                        <input type="number" pattern="^[69]\d{8}$" value="999555666" required>
+                        <input title="Numero de teléfono" type="number" pattern="^[69]\d{8}$" value="999555666" required>
                     </fieldset>
                 </section>
                 <section>
                     <h3>Datos de Envio.</h3>
                     <fieldset>
-                        <input type="text" placeholder="Dirección." value="mi calle, en mi edifico" required>
-                        <input type="text" placeholder="Apellidos." value="Gonzalez" required>
-                        <input type="email" name="email" pattern="^[_A-Za-z0-9]+@[_A-Za-z0-9]+.[A-Za-z]+$"
+                        <input title="Direccion" type="text" placeholder="Dirección." value="mi calle, en mi edifico" required>
+                        <input title="Apellidos" type="text" placeholder="Apellidos." value="Gonzalez" required>
+                        <input title="email" type="email" name="email" pattern="^[_A-Za-z0-9]+@[_A-Za-z0-9]+.[A-Za-z]+$"
                             value="keliamkeliam@keliam.keliam" required>
-                        <input type="number" pattern="^[69]\d{8}$" value="999555666" required>
+                        <input title="Numero" type="number" pattern="^[69]\d{8}$" value="999555666" required>
                     </fieldset>
                 </section>
             </div>
@@ -142,57 +141,57 @@
                         <tr>
                             <td>
                                 <label class="switch">
-                                    <input type="checkbox" checked>
+                                    <input title="Boton de seguir" type="checkbox" checked>
                                     <span class="slider round"></span>
                                 </label>
                             </td>
-                            <td><input type="text" value="Jujutsu Kaisen" readonly></td>
-                            <td><input type="text" value="Accion" readonly></td>
-                            <td><input type="text" value="Manga" readonly></td>
+                            <td><input title="Jujutsu Kaisen" type="text" value="Jujutsu Kaisen" readonly></td>
+                            <td><input title="Accion" type="text" value="Accion" readonly></td>
+                            <td><input title="Manga" type="text" value="Manga" readonly></td>
                         </tr>
                         <tr>
                             <td>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input title="Boton de seguir" type="checkbox">
                                     <span class="slider round"></span>
                                 </label>
                             </td>
-                            <td><input type="text" value="Superman" readonly></td>
-                            <td><input type="text" value="Heroes" readonly></td>
-                            <td><input type="text" value="Comic" readonly></td>
+                            <td><input title="Superman" type="text" value="Superman" readonly></td>
+                            <td><input title="Heroes" type="text" value="Heroes" readonly></td>
+                            <td><input title="Comic" type="text" value="Comic" readonly></td>
                         </tr>
                         <tr>
                             <td>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input title="Boton de seguir" type="checkbox">
                                     <span class="slider round"></span>
                                 </label>
                             </td>
-                            <td><input type="text" value="Solo Leveling" readonly></td>
-                            <td><input type="text" value="Fantasia" readonly></td>
-                            <td><input type="text" value="Manwa" readonly></td>
+                            <td><input title="Solo Leveling" type="text" value="Solo Leveling" readonly></td>
+                            <td><input title="Fantasia" type="text" value="Fantasia" readonly></td>
+                            <td><input title="Manwa" type="text" value="Manwa" readonly></td>
                         </tr>
                         <tr>
                             <td>
                                 <label class="switch">
-                                    <input type="checkbox" checked>
+                                    <input title="Boton de seguir" type="checkbox" checked>
                                     <span class="slider round"></span>
                                 </label>
                             </td>
-                            <td><input type="text" value="Kimetsu No Yaiba" readonly></td>
-                            <td><input type="text" value="Fantasia" readonly></td>
-                            <td><input type="text" value="Manga" readonly></td>
+                            <td><input title="Kimetsu No Yaiba" type="text" value="Kimetsu No Yaiba" readonly></td>
+                            <td><input title="Fantasia" type="text" value="Fantasia" readonly></td>
+                            <td><input title="Manga" type="text" value="Manga" readonly></td>
                         </tr>
                         <tr>
                             <td>
                                 <label class="switch">
-                                    <input type="checkbox" checked>
+                                    <input title="Boton de seguir" type="checkbox" checked>
                                     <span class="slider round"></span>
                                 </label>
                             </td>
-                            <td><input type="text" value="Spider-Man" readonly></td>
-                            <td><input type="text" value="Heroes" readonly></td>
-                            <td><input type="text" value="Comic" readonly></td>
+                            <td><input title="Spider-Man" type="text" value="Spider-Man" readonly></td>
+                            <td><input title="Heroes" type="text" value="Heroes" readonly></td>
+                            <td><input title="Comic" type="text" value="Comic" readonly></td>
                         </tr>
                     </table>
                 </fieldset>
